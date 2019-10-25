@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>File Uploads </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     
+</head>
+<body>
+       <div class="container">
+       <h1 style="text-align: center"> Image Upload Center</h1>
+       <h2 style="text-align: center"> Uploading Images to Project  <%= typeof entry != 'undefined' ? entry: ''%></h2>
+       <form action="/upload-multiple-images" method="POST" enctype="multipart/form-data"> 
+               <div class="file-field input-field">
+                 <div class="btn grey">
+                   <span>Select multiple images</span>
+                   <input name="multiple_images" type="file" multiple>
+                 </div>
+                 <div class="file-path-wrapper">
+                   <input class="file-path validate" type="text">
+                 </div>
+               </div>
+               <input type="submit" name="btn_upload_multiple_images" value="Upload" /><%= typeof error != 'undefined' ? error: ''%>
+             </form>
+        <div id="RetreiveImages">
+        <p> Get your Uploaded Images for Annotation </p>
+        <button id="getImagesForAnnotation" type="submit" class="btn">  Retreive Uploaded Images </button>
+        </div>
+        <div>
+          <img id="image-1"/>
+          <img id="image-2"/>
+          <img id="image-3"/>
+          <img id="image-4"/>
+          <img id="image-5"/>
+          <img id="image-6"/>
+          <img id="image-7"/>
+          <img id="image-8"/>
+          <img id="image-9"/>
+          <img id="image-10"/>
+        </div>
+       </div>
+       <script
+       src="https://code.jquery.com/jquery-3.4.1.min.js"
+       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+       crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+       <script src= "getDirInfo.js"></script>
+
+</body>
+</html>
