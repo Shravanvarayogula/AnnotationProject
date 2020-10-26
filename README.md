@@ -2,10 +2,13 @@
 Image Upload and Annotations Portal
 
 // The Entry Point Files to the application are located in the Views Folders. 
+
 //Folders Destination to create new folders : /public/uploads/createFolders
+
 //Folders Destination to upload new images: /public/uploads/createFolders/ {UsercreatedFolder}
 
 //Application Entry Point File : index.ejs
+
 //Application Image Uploader File: Imageuploader.ejs
 
 
